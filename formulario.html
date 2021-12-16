@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+    <!-- Título da página (aparece na aba) -->
+    <title>Cadastro do Aluno</title>
+</head>
+
+<body>
+
+    <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+    <div>
+        <h1 id="titulo">Cadastro do aluno</h1>
+        <p id="subtitulo">Preencha os campos com suas informações</p>
+        <br>
+    </div>
+
+    <!-- Início do formulário -->
+    <form>
+
+        <fieldset class="grupo">
+
+            <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+
+        </fieldset>
+
+        <!-- Campo de email com-->
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <!-- Campo de CPF -->
+        <div>
+            <label for="cpf"><strong>Digite seu CPF</strong></label>
+            <input type="text" name="cpf" \ pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+                title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+            <input type="submit" value="Verificar">
+        </div>
+        <br>
+
+        <!-- Campo do RG -->
+        <div>
+            <label for="cpf"><strong>Digite seu RG</strong></label>
+            <input type="text" name="rg" \ pattern="\d{2}\.\d{3}\.\d{3}" \ title="Digite um RG no formato: xx.xxx.xxx">
+            <input type="submit" value="Verificar">
+        </div>
+
+        <br>
+        <!-- Campo de desenvolvimento web com 4 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+        <div class="campo">
+            <label><strong>Qual seu estado civil?</strong></label>
+            <label>
+                <input type="radio" name="devweb" value="solteiro" checked>Solteiro
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="casado">Casado
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="viuvo">Viúvo
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="divorciado">Divorciado
+            </label>
+        </div>
+
+        <fieldset>
+
+        </fieldset>
+        <div class="campo">
+
+            <div class="campo">
+                <label for="nome"><strong>Endereço</strong></label>
+                <input type="text" name="endereco" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="nome"><strong>CEP</strong></label>
+                <input type="text" name="cep" \ pattern="\d{5}\.\d{3}" \
+                    title="Digite um CEP no formato: xxxxx.xxx">
+                <input type="submit" value="Verificar">
+            </div>
+
+            <div class="campo">
+                <label for="nome"><strong>Cidade</strong></label>
+                <input type="text" name="cidade" id="nome" required>
+            </div>
+
+
+            <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+            <label for="estado"><strong>UF</strong></label>
+            <select id="estado" required>
+                <option selected disabled value="">Selecione</option>
+                <option>AL</option>
+                <option>BA</option>
+                <option>CE</option>
+                <option>MA</option>
+                <option>PB</option>
+                <option>PE</option>
+                <option>PI</option>
+                <option>RN</option>
+                <option>SE</option>
+            </select>
+        </div>
+
+
+
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit" onsubmit="">Concluído</button>
+
+    </form>
+
+</body>
+
+</html>
